@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Coca Cola</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header,
+        nav,
+        main,
+        footer,
+        .dummy,
+        .safety,
+        #product-thumbnails {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .section-box h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .subsection-box {
+            border-left: 3px solid #007bff;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+
+        .main-li ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        #Hero,
+        #features,
+        #pricing {
+            background-color: #e9ecef;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        #pricing article {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #e30613;
+            padding: 0 10px;
+            margin-left: -10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #e30613;
+            outline: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #e30613;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #c70010;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h2>Welcome to the Coca Cola Page</h2>
+        <p>Enjoy the refreshing taste of Coca Cola!</p>
+        <a href="#main">Skit to main</a>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./products.html">Products</a>
+        <a href="#contact-modal" class="modal-trigger">Contact</a>
+    </nav>
+
+    <!-- Dummy Section -->
+    <section class="dummy">
+        <div class="section-box main-li">
+            <h2>Online Grocery and Delivery</h2>
+            <ul>
+                <li><b>Blinkit:</b> Delivers cold drinks in cans quickly to your doorstep.</li>
+                <li><b>Swiggy:</b> Provides instant delivery of soft drinks, including popular brands, in specific
+                    cities.</li>
+            </ul>
+        </div>
+
+        <div class="section-box" id="specific-brands">
+            <h2>Specific Brands or Products</h2>
+            <div class="subsection-box">
+                <h3>Coca-Cola</h3>
+                <p>Visit the brand's official website for information and to find where to buy their products.</p>
+            </div>
+            <div class="subsection-box">
+                <h3>Cann</h3>
+                <p>For their specialized social tonics, visit the official Cann website.</p>
+            </div>
+            <div class="subsection-box">
+                <h3>Candy Can</h3>
+                <p>Visit the official website for their range of sparkling, zero-sugar drinks.</p>
+            </div>
+            <div class="subsection-box">
+                <h3>Cano Water</h3>
+                <p>For aluminum-canned water, check out the Cano Water website.</p>
+            </div>
+        </div>
+
+        <div class="section-box main-li">
+            <h2>Wholesale or Bulk</h2>
+            <ul>
+                <li><b>Hyperpure:</b> Offers bulk cases of cold drinks, often at wholesale prices.</li>
+                <li><b>Lots Wholesale:</b> A wholesale option for various beverages, including those sold in cans.</li>
+                <li><b>PepsiCo Partners:</b> For information on PepsiCo products and distribution, you can visit their
+                    partner website.</li>
+            </ul>
+        </div>
+
+        <div class="section-box main-li">
+            <h2>Packaging and Sustainability Information</h2>
+            <ul>
+                <li><b>Ball Corporation:</b> Learn about the manufacturing and sustainability efforts behind beverage
+                    cans.</li>
+                <li><b>Crown Holdings:</b> A manufacturer of beverage cans, their site provides information on their
+                    products and sustainability practices.</li>
+                <li><b>Canpack:</b> A beverage can manufacturer, the website offers details on their capabilities and
+                    products.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Safety Links Section -->
+    <section class="safety">
+        <h2>2. Safe, Useful Links Demonstration</h2>
+        <p><a href="#specific-brands">specific Brands and products</a>(internal page link)</p>
+        <p><a href="https://www.coca-cola.com/in/en" target="_blank" rel="noopener noreferrer">Coca cola official
+                page</a>(external page link safer)</p>
+        <p><a href="mailto:ganeshdholi88@gmail.com?subject=Hello%20There">Email me</a> (Mailto link redirect to email
+            needs setup mail to in browser)</p>
+        <p><a href="tel:+918949276567">Call us now: (91) 8949-276567</a>(mobile number needs setup)</p>
+        <p><a href="https://www.coca-colacompany.com/content/dam/company/us/en/about-us/history/coca-cola-a-short-history-125-years-booklet.pdf"
+                download="Company_Brochure.pdf">Download brochure (PDF)</a> (Download link) </p>
+        <div id="link-demo-end" style="padding-top: 50px;">
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main">
+        <h1>Coca Cola</h1>
+        <section id="Hero" class="main-li">
+            <h2>About Coca Cola</h2>
+            <picture>
+                <source type="image/avif"
+                    srcset="../html/images/avif/coke_bottle_600.avif 600w, ../html/images/avif/coke_bottle_800.avif"
+                    sizes="(max-width: 600px)" width="600" height="400" sizes="(min-width: 600px)" width="300"
+                    height="100" alt="">
+
+                <source type="image/webp"
+                    srcset="../html/images/webp/coke_bottle_600.webp 600w, ../html/images/webp/coke_bottle_800.webp"
+                    sizes="(max-width: 600px)" width="600" height="400" sizes="(min-width: 600px)" width="300"
+                    height="100"
+                    alt="An ice-cold, glass Coca-Cola contour bottle sweating condensation against a vibrant red background.">
+
+                <img src="../html/images/jpg/coke_bottle_800.jpg"
+                    srcset="../html/images/jpg/coke_bottle_600.jpg 400w, ../html/images/jpg/coke_bottle_800.jpg 200w"
+                    sizes="(max-width: 600px)" width="400" height="200"
+                    alt="An ice-cold, cup glass of Coca-Cola sweating condensation against a vibrant black & white."
+                    loading="lazy">
+            </picture>
+
+            <p>Coca Cola is a globally recognized brand known for its refreshing beverages. Founded in 1886, it has
+                become a staple in many households around the world.</p>
+            <h2>Our Products</h2>
+            <ul>
+                <li>Coca Cola Classic</li>
+                <li>Coca Cola Zero Sugar</li>
+                <li>Diet Coke</li>
+                <li>Fanta</li>
+                <li>Sprite</li>
+            </ul>
+        </section>
+
+        <section id="features">
+            <h2 id="features-heading">Features</h2>
+            <p>The Coca-Cola Company has evolved into a total beverage company, offering over 500 brands to meet every
+                taste and occasion, not just the original fizzy drink.</p>
+
+            <article class="product-category main-li">
+                <h2>Sparkling Favorites</h2>
+                <h3>Our core includes the classic Coca-Cola Trademark products (Classic, Zero Sugar, Diet Coke), Sprite,
+                    and Fanta, continually innovating with new flavors.</h3>
+                <ul class="product-list">
+                    <li>Coca-Cola Zero Sugar</li>
+                    <li>Sprite Lemon-Lime</li>
+                    <li>Fanta Orange</li>
+                </ul>
+            </article>
+
+            <article class="product-category main-li">
+                <h2>Hydration, Juices & Coffee</h2>
+                <p>Expanding beyond soft drinks into healthier and premium segments like water, ready-to-drink coffee,
+                    and functional beverages.</p>
+                <ul class="product-list">
+                    <li>smartwater®</li>
+                    <li>Minute Maid® Juices</li>
+                    <li>Costa Coffee® (Ready-to-Drink)</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="pricing">
+            <h2 id="pricing-heading">pricing of coca-cola</h2>
+            <p>
+                Join the global Coca-Cola system. Whether you are a small local distributor or a multinational retailer,
+                we offer structured tiers for mutual growth and success.
+            </p>
+
+            <article class="pricing main-li">
+                <h3>250ML Bottle</h3>
+                <p>Price: ₹20</p>
+            </article>
+            <article class="pricing main-li">
+                <h3>750ML Bottle</h3>
+                <p>Price: ₹36</p>
+            </article>
+            <article class="pricing main-li">
+                <h3>300ML Can</h3>
+                <p>Price: ₹40</p>
+            </article>
+            <article class="pricing main-li">
+                <h3>1.25L bottle</h3>
+                <p>Price: ₹60</p>
+            </article>
+        </section>
+    </main>
+
+
+    <!-- Product Image Gallery Thumbnails -->
+    <ul id="product-thumbnails" aria-label="Product image gallery thumbnails"
+        style="display: flex; justify-content: space-evenly; align-items: center; list-style: none;">
+        <li>
+            <a href="../html/images/products/coke-classic-full.jpg"
+                aria-label="View large image of Classic Coca-Cola Bottle">
+                <img src="../html/images/products/coke-classic-thumb.jpg"
+                    alt="Thumbnail of an ice-cold Classic Coca-Cola bottle." width="200" height="300" decoding="async">
+            </a>
+        </li>
+        <li>
+            <a href="../html/images/products/sprite-full.jpg" aria-label="View large image of Sprite Can">
+                <img src="../html/images/products/sprite-thumb.jpg" alt="Thumbnail of a chilled Sprite can." width="240"
+                    height="300" decoding="async">
+            </a>
+        </li>
+
+        <li>
+            <a href="../html/images/products/fanta-orange-full.jpg" aria-label="View large image of Fanta Orange drink">
+                <img src="../html/images/products/fanta-orange-thumb.jpg"
+                    alt="Thumbnail of a bright orange Fanta bottle." width="400" height="300" decoding="async">
+            </a>
+        </li>
+
+        <li>
+            <a href="../html/images/products/smartwater-full.jpg" aria-label="View large image of smartwater bottle">
+                <img src="../html/images/products/smartwater-thumb.jpg" alt="Thumbnail of a tall smartwater bottle."
+                    width="230" height="300" decoding="async">
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- footer page -->
+    <footer>
+        <p>&copy; 2024 Coca Cola Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact/Signup Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Contact / signup form</h2>
+            <p>Fill out the form below for continue the journey with Coca-Cola.</p>
+            <form method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Account & Location Details</legend>
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+                        <input type="password" id="password" name="password" required minlength="8"
+                            autocomplete="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country of Operation</label>
+                        <select id="country" name="country" required autocomplete="country-name">
+                            <option value="" selected>-- Select Country --</option>
+                            <option value="us">United States</option>
+                            <option value="in">India</option>
+                            <option value="cn">China</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service and Privacy Policy</a>.</label>
+                </div>
+                <button href="#" type="submit" class="btn btn-submit">Submit Application</button>
+            </form>
+            <button type="button" class="modal-close" aria-label="Close form">×</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.modal-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.getElementById('contact-modal').style.display = 'flex';
+            });
+        });
+
+        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function () {
+                document.getElementById('contact-modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('contact-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+            document.getElementById('contact-modal').style.display = 'none';
+            this.reset();
+        });
+
+    </script>
+</body>
+
+</html>
