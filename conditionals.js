@@ -739,7 +739,7 @@ for (let i = 0; i < maxLength; i++) {
 
 //43) Min-Max Swap: Given a,b — if a>b swap; then print in non-decreasing order. No temp variable (use arithmetic or destructuring).
 
-a = 30;
+a = 30; 
 b = 20;
 
 if (a > b){
@@ -760,7 +760,7 @@ let l1 = 3, l2 = 5, r1 = 8, r2 = 12;
     console.log('Disjoint');
   }
 
-
+  
 //  45) Near Multiple of Ten: Given n, print 'YES' if n is within ±2 of a multiple of 10, else 'NO' (e.g., 8→YES, 13→NO, 18→YES).
 n = 30;
 
