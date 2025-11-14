@@ -84,3 +84,31 @@ for (let i = 0; i < arr.length - 1; i++){
 }
 
 console.log(arr)
+
+// longest consecurive secquence
+let numsMain2 = [99, 100, 1, 2, 3, 4, 8, 0, 5, 5, 8, 3, 99, 102, 6, 7];
+let newNums = numsMain2.sort((a, b) => a - b);
+let longest = 0;
+let current = 0;
+
+if (newNums.length > 0) {
+  longest = 1;
+  current = 1;
+}
+
+for (let i = 1; i < newNums.length; i++) {
+  if (newNums[i] === newNums[i - 1]) {
+    continue;
+  } else if (newNums[i] === newNums[i - 1] + 1) {
+    current++;
+  } else {
+    longest = Math.max(longest, current);
+    current = 1;
+  }
+}
+
+longest = Math.max(longest, current);
+console.log("The longest consecutive sequence is: " + longest + newNums);
+
+
+//
