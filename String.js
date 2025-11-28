@@ -96,8 +96,9 @@ else console.log(arr.join(" "));
 let s = "luffy is still joyboy";
 let arrMain = s.split(" ");
 let arrMain2 = arrMain.filter(item => item !== (" ", ""));
+console.log(arrMain2);
 let element = arrMain2[arrMain2.length - 1];
-console.log(element.length)
+console.log(element.length+"hll")
 
 console.log();
 console.log();
